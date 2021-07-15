@@ -1,11 +1,25 @@
 
+import React from "react";
+import {BrowserRouter as  Switch, Router, Route } from 'react-router-dom';
 import './App.css';
+import Header from './containers/Header'; 
+import ProductDetails from './containers/ProductDetails';
+import ProductListing from './containers/ProductListing';
+
+
 
 function App() {
   return (
     <div className="App">
-     
-      <h1>HELLO WORLD</h1>
+     <Router>
+        <Header/>
+        <Switch>
+          <Route path='/' exact component={ProductListing}/>
+          <Route path='/product/:productId' exact component={ProductDetails}/>
+          <Route>404 Not Found !!</Route>
+        </Switch>
+     </Router>
+      
     </div>
   );
 }
