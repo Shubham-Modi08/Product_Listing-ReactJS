@@ -1,6 +1,6 @@
 
 import React from "react";
-import {BrowserRouter as  Switch, Router, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from './containers/Header'; 
 import ProductDetails from './containers/ProductDetails';
